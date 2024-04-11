@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./layouts/Main";
 import { Products, ProductDetail, Home, About } from "./pages/index";
-
+import { loader as ProductsLoader } from "./pages/Products";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products></Products>,
+        loader: ProductsLoader,
       },
       {
         path: "/product/:title",
